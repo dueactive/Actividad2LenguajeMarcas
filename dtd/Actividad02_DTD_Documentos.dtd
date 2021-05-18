@@ -1,0 +1,59 @@
+<!-- DTD Documentos -->
+<!--Validamos DTD + XML desde la web https://www.xmlvalidation.com/ -->
+<!-- Podemos tener varios "Documento"  -->
+<!ELEMENT Documentos (Documento+)>
+<!ELEMENT Documento (Libro?,Revista?,Periodico?)>
+<!ATTLIST Documento id ID #REQUIRED><!--duda entre usar CDATA o ID -->
+<!-- DTD Libro -->
+<!ELEMENT Libro (Titulo,Capitulos,Indice,Sinopsis)>
+<!ATTLIST Libro tipo_clase (novela | infantil | didactico) #REQUIRED>
+<!ATTLIST Libro paginas CDATA #REQUIRED>
+<!--<!ELEMENT Titulo (#PCDATA)>-->
+<!ELEMENT Capitulos (Capitulo+)>
+<!ELEMENT Capitulo (Contenido)>
+<!ATTLIST Capitulo titulo CDATA #REQUIRED>
+<!ATTLIST Capitulo paginas CDATA #REQUIRED>
+<!--<!ELEMENT Contenido EMPTY>
+<!ATTLIST Contenido enlace CDATA #REQUIRED>-->
+<!--<!ELEMENT Indice (#PCDATA)>-->
+<!ELEMENT Sinopsis (#PCDATA)>
+
+<!-- DTD Revista -->
+<!ELEMENT Revista (Titulo,Num_Revista,Indice,Secciones)>
+<!ATTLIST Revista tipo_clase (informatica | corazon | coches | investigacion | otra) #REQUIRED>
+<!ATTLIST Revista paginas CDATA #REQUIRED>
+<!--<!ELEMENT Titulo (#PCDATA)>-->
+<!ELEMENT Num_Revista (#PCDATA)>
+<!--<!ELEMENT Indice (#PCDATA)>-->
+<!ELEMENT Secciones (Seccion+)>
+<!ELEMENT Seccion (Contenido)>
+<!ATTLIST Seccion titulo CDATA #REQUIRED>
+<!ATTLIST Seccion paginas CDATA #REQUIRED>
+<!--<!ELEMENT Contenido EMPTY>
+<!ATTLIST Contenido enlace CDATA #REQUIRED>-->
+
+
+<!-- DTD Periodico -->
+<!ELEMENT Periodico (SeccionesP)>
+<!ATTLIST Periodico tipo_clase (nacionales | internacionales) #REQUIRED>
+<!ATTLIST Periodico fecha_publicacion CDATA #REQUIRED>
+<!ELEMENT SeccionesP (SeccionP+)>
+<!ELEMENT SeccionP (Articulos)>
+<!ATTLIST SeccionP tipo_seccion (economica | opinion | deportes | nacional | internacional) #REQUIRED>
+<!ELEMENT Articulos (Articulo+)>
+<!ELEMENT Articulo (Contenido)>
+<!ATTLIST Articulo titulo CDATA #REQUIRED>
+<!ATTLIST Articulo autor CDATA #REQUIRED>
+<!--<!ELEMENT Contenido EMPTY>
+<!ATTLIST Contenido enlace CDATA #REQUIRED>-->
+
+<!--Elementos comunes-->
+<!ELEMENT Contenido EMPTY>
+<!ATTLIST Contenido enlace CDATA #REQUIRED>
+<!ELEMENT Titulo (#PCDATA)>
+<!ELEMENT Indice (#PCDATA)>
+
+
+
+
+

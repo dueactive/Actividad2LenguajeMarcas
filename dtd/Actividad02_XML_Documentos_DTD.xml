@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!--USAMOS DTDd-->
+<!DOCTYPE Documentos SYSTEM "Actividad02_DTD_Documentos.dtd">
+<!--Si usamos xsd-->
+<!--<Documentos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation= "Actividad02_XSD_Documentos.xsd">-->
+<Documentos>
+    <!-- Declaramos el XML para el tipo libro. -->
+    <Documento id="L0001">
+        <Libro tipo_clase="novela" paginas="200">
+            <Titulo>xxxxxxxxx</Titulo>
+            <Capitulos>
+                <Capitulo titulo ="xxxxxA" paginas="100">
+                    <Contenido enlace="https://xxxxA.com"/>
+                </Capitulo>
+                <Capitulo titulo ="xxxxxB" paginas="100">
+                    <Contenido enlace="https://xxxxB.com"/>
+                </Capitulo>
+            </Capitulos>
+            <!-- En indice incluimos código HTML para representar el indice. -->
+            <Indice>
+            <![CDATA[
+                <html>
+                    <head>
+                        <title>Indice Libro1</title>
+                    </head>
+                    <body>
+                        <ol type="i">
+                            <li>Capitulo primero</li>
+                            <li>Capitulo segundo</li>
+                            <li>Capitulo tercero</li>
+                            <li>Capitulo cuarto</li>
+                        </ol>
+                    </body>
+                </html>
+            ]]>
+            </Indice>
+            <Sinopsis>sdfdfdfdfdfdfdfdfdf</Sinopsis>
+        </Libro>
+    </Documento>
+    <!-- Declaramos el XML para el tipo Revista. -->
+    <Documento id="R0001">
+        <Revista tipo_clase="informatica" paginas="150">
+            <Titulo>Hola!!!</Titulo>
+            <Num_Revista>000024</Num_Revista>
+            <Indice>
+            <![CDATA[
+                <html>
+                    <head>
+                        <title>Indice Revista</title>
+                    </head>
+                </html>
+            ]]>
+            </Indice>
+            <Secciones>
+                <Seccion titulo="Seccionxxxxx" paginas="3">
+                     <Contenido enlace="https://xxxx.com"/>
+                </Seccion>
+                <Seccion titulo="SeccionxxRRR" paginas="5">
+                     <Contenido enlace="https://RRRR.com"/>
+                </Seccion>                
+            </Secciones>
+        </Revista>
+    </Documento>
+    <!-- Declaramos el XML para el tipo Periodico. -->
+    <Documento id="P0001">
+        <Periodico tipo_clase="internacionales" fecha_publicacion="15-05-2021">
+            <SeccionesP>
+                <SeccionP tipo_seccion="economica">
+                    <Articulos>
+                        <Articulo titulo="economia A" autor="Pepito">
+                            <Contenido enlace="https://xxxxR.com"/>
+                        </Articulo>
+                        <Articulo titulo="economia B" autor="Juanito">
+                            <Contenido enlace="https://xxxxDD.com"/>
+                        </Articulo>                        
+                    </Articulos>
+                </SeccionP>
+                <SeccionP tipo_seccion="opinion">
+                    <Articulos>
+                        <Articulo titulo="opinion A" autor="Pedrito">
+                            <Contenido enlace="https://TTTTTT.com"/>
+                        </Articulo>
+                        <Articulo titulo="opinion B" autor="Josito">
+                            <Contenido enlace="https://FFFFF.com"/>
+                        </Articulo>                        
+                    </Articulos>
+                </SeccionP>                
+            </SeccionesP>
+        </Periodico>
+    </Documento>
+        <!-- Declaramos el XML para el tipo libro número 2. -->
+    <Documento id="L0002">
+        <Libro tipo_clase="infantil" paginas="200">
+            <Titulo>xxxxxxxxx</Titulo>
+            <Capitulos>
+                <Capitulo titulo ="xxxxxA" paginas="100">
+                    <Contenido enlace="https://xxxxA.com"/>
+                </Capitulo>
+                <Capitulo titulo ="xxxxxB" paginas="100">
+                    <Contenido enlace="https://xxxxB.com"/>
+                </Capitulo>
+            </Capitulos>
+            <!-- En indice incluimos código HTML para representar el indice. -->
+            <Indice>
+            <![CDATA[
+                <html>
+                    <head>
+                        <title>Indice Libro2</title>
+                    </head>
+                    <body>
+                        <ol type="i">
+                            <li>Capitulo primero</li>
+                            <li>Capitulo segundo</li>
+                            <li>Capitulo tercero</li>
+                            <li>Capitulo cuarto</li>
+                        </ol>
+                    </body>
+                </html>
+            ]]>            
+            </Indice>
+            <Sinopsis>sdfdfdfdfdfdfdfdfdf</Sinopsis>
+        </Libro>
+    </Documento>
+</Documentos>
